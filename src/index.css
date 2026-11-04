@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --color-creme: #FAF6EE;
+  --color-oliva: #354224;
+  --color-terracota: #B84A2B;
+  --color-mostarda: #DCA427;
+  --color-kraft: #C7B088;
+  --color-tinta: #1C1812;
+}
+
+/* Paper Grain Texture (5-8% opacity) */
+.paper-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.78' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.06'/%3E%3C/svg%3E");
+}
+
+/* Duotone & Granulated Photo Treatment */
+.duotone-warm {
+  filter: sepia(35%) contrast(110%) brightness(95%);
+  transition: filter 0.35s ease;
+}
+.duotone-warm:hover {
+  filter: sepia(15%) contrast(105%) brightness(100%);
+}
+
+.duotone-terracotta {
+  filter: sepia(50%) hue-rotate(-20deg) contrast(115%);
+  transition: filter 0.35s ease;
+}
+.duotone-terracotta:hover {
+  filter: sepia(20%) hue-rotate(-10deg) contrast(105%);
+}
+
+/* Kraft Paper Border & Frame */
+.kraft-border {
+  border: 4px solid #CDBA96;
+  box-shadow: 0 4px 12px rgba(40, 28, 14, 0.08), inset 0 0 0 1px rgba(100, 70, 30, 0.12);
+}
+
+.kraft-tag {
+  background-color: #ECE0CD;
+  border: 1px solid #C4AF8B;
+  color: #382C1B;
+}
+
+/* Accessibility Focus Ring */
+*:focus-visible {
+  outline: 2px solid #B84A2B !important;
+  outline-offset: 3px !important;
+}
+
+/* Selection Color */
+::selection {
+  background: rgba(220, 164, 39, 0.35);
+  color: #1C1812;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}

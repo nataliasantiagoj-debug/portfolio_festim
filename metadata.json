@@ -1,0 +1,6 @@
+{
+  "name": "Festim · Produtora Cultural",
+  "description": "Portfólio da Festim. Aqui tem axé: produção de shows, festivais e circulação de música brasileira com curadoria afetiva.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
